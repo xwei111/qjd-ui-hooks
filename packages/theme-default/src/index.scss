@@ -1,0 +1,10 @@
+@import './icon.scss';
+@import './theme.scss';
+
+input, button, select, optgroup, textarea {
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}

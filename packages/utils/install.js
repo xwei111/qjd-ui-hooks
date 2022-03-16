@@ -1,0 +1,1 @@
+export default el => el.install = Vue => Vue.component(el.name, el);

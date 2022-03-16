@@ -1,0 +1,21 @@
+.slider-box {
+    width: 200px;
+    font-size: 14px;
+    padding: 20px;
+    p {
+        line-height: 34px;
+    }
+    .slider-parentTitle {
+        font-weight: 700;
+    }
+    .slider-title {
+        cursor: pointer;
+    }
+    .slder-childTitle {
+        padding-left: 10px;
+        cursor: pointer;
+    }
+    .slider-selectCss {
+        color: $primary-color;
+    }
+}
