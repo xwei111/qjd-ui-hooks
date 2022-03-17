@@ -8,7 +8,7 @@ export default ({
   cKey = 'key',
   otherParams = {},
   callback = null,
-  onPreview
+  preview
 }) => {
   // loading
   const loading = ref(false)
@@ -47,7 +47,7 @@ export default ({
     loading.value = false
   }
   // 预览
-  const onPreview = data => onPreview && onPreview(data)
+  const onPreview = data => preview && preview(data)
   // 设置文件
   const setFileList = (files) => uploadRef.value && uploadRef.value.setFileList(files)
   // 清空文件

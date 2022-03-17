@@ -43,7 +43,7 @@ const uploadApis = useUpload({ formApis, key: 'test' })
 |  cKey   |  文件对应的key | - | - | key |
 |  otherParams  | 混入其他参数，最终会通过给formApis赋值给每一组文件数据  | Object | - | - |
 |  callback   | 自定义文件处理方案 | Function | - | - |
-|  onPreview  |  预览回调，携带一个参数data，data里包含文件信息 | Function(data) | - | - |
+|  preview  |  预览回调，携带一个参数data，data里包含文件信息 | Function(data) | - | - |
 
 ```otherParams```和```callback```的实现逻辑
 

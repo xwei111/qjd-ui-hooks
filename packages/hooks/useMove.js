@@ -1,6 +1,6 @@
 import { useMousePressed, useMouse } from '@vueuse/core'
 import { reactive, toRefs, watch } from '@vue/composition-api'
-import useClient from '@/hooks/useClient'
+import useClient from './useClient'
 
 /**
  * 元素可拖拽时，计算元素位置，left和right取其一，top和bottom取其一
