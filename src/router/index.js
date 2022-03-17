@@ -8,7 +8,8 @@ const getPage = (page) => resolve => require([`@/pages/${page}/${page}`], resolv
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
+  base: '/qjd-ui-hooks-page',
   routes: [
     {
       path: '/',

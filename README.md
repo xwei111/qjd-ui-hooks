@@ -1,16 +1,16 @@
-# qjd-ui
+# qjd-ui-hooks
 
 统一基础组件，沉淀业务组件，以文档形成统一管理
 
 ## 安装
 
-npm install qjd-ui --save
+npm install qjd-ui-hooks --save
 
 ## CDN引入
 
 ```html
 <!-- css -->
-<link rel="stylesheet" href="https://unpkg.com/qjd-ui/lib/theme-default/index.css">/
+<link rel="stylesheet" href="https://unpkg.com/qjd-ui-hooks/lib/theme-default/index.css">/
 <!-- html -->
 <div id="app">
   <xw-button>默认按钮</xw-button>
@@ -22,7 +22,7 @@ npm install qjd-ui --save
 </div>
 <!-- js -->
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/qjd-ui/lib/qjdui.js"></script>
+<script src="https://unpkg.com/qjd-ui-hooks/lib/qjdui.js"></script>
 <script>
   new Vue({
     el: '#app'
@@ -32,9 +32,9 @@ npm install qjd-ui --save
 
 ## 批量引入
 
-  import qjdui from 'qjd-ui'
+  import qjdui from 'qjd-ui-hooks'
 
-  import 'qjd-ui/lib/theme-default/index.css'
+  import 'qjd-ui-hooks/lib/theme-default/index.css'
 
   Vue.use(qjdui)
 
@@ -43,9 +43,9 @@ npm install qjd-ui --save
 
 ### 方式一（需手动引入组件&css）
 
-  import Button from 'qjd-ui/lib/button'
+  import Button from 'qjd-ui-hooks/lib/button'
 
-  import 'qjd-ui/lib/theme-default/button.css'
+  import 'qjd-ui-hooks/lib/theme-default/button.css'
 
   Vue.component(Button.name, Button)
 
@@ -63,9 +63,9 @@ yarn add babel-plugin-import -D
     [
       "import",
       {
-        libraryName: 'qjd-ui',
+        libraryName: 'qjd-ui-hooks',
         customStyleName: (name) => {
-          return `qjd-ui/lib/theme-default/${name}.css`;
+          return `qjd-ui-hooks/lib/theme-default/${name}.css`;
         },
       },
     ]
@@ -76,7 +76,7 @@ yarn add babel-plugin-import -D
 
   完成上述配置后引入方式如下：
 
-  import { Button, Input } from 'qjd-ui';
+  import { Button, Input } from 'qjd-ui-hooks';
 
   Vue.component(Button.name, Button)
 

@@ -56,7 +56,7 @@ export default ({
       // 获取接口结果处理
       const data = callback ? callback(res) : res
       // 存储处理接口，以便外部获取
-      result.value = data?.data ?? null
+      result.value = data ? data.data : null
       // 成功回调
       const searchs = isArray ? { searchParams } : { ...searchParams }
       successCallBack && successCallBack(data ? { ...data, params: { ...params, ...searchs } } : {})

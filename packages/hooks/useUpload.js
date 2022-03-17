@@ -21,8 +21,8 @@ export default ({
       files = callback(files)
     } else {
       // 通用文件处理逻辑，otherParams：额外参数
-      files = files?.map(file => {
-        const { fileName, key } = file?.response ?? {}
+      files = (files || []).map(file => {
+        const { fileName, key } = file && file.response ? file.response : {}
         return { [cName]: fileName, [cKey]: key, ...otherParams }
       })
     }
@@ -33,10 +33,10 @@ export default ({
   const beforeUpload = () => { loading.value = true }
   // 文件改变触发校验
   const onChange = ({ files }) => {
-    _setFile(files ?? [])
+    _setFile(files || [])
   }
   // 移除
-  const onRemove = ({ files }) => _setFile(files ?? [])
+  const onRemove = ({ files }) => _setFile(files || [])
   // 错误
   const onError = ({ err }) => {
     loading.value = false

@@ -38,7 +38,7 @@ export default ({
   // 清除校验
   const clearValidate = val => formRef.value && formRef.value.clearValidate(val)
   // 查询formConfig-item
-  const getConfig = key => state.formConfig.find(item => item.key === key) ?? null
+  const getConfig = key => state.formConfig.find(item => item.key === key) || null
   // 更新整个formConfig
   const setConfigs = vals => { state.formConfig = cloneDeep(vals) }
   /**

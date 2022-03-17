@@ -34,7 +34,7 @@ export default function ({ tableRef, tableState, selectState, columns }) {
   }
   // 单条删除
   const deleteDataSource = (value, key = '_id') => {
-    const index = tableState.dataSource?.findIndex(item => item[key] === value)
+    const index = tableState.dataSource.findIndex(item => item[key] === value)
     if (!index && index !== 0) return
     tableState.dataSource.splice(index, 1)
   }
