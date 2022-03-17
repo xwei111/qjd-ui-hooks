@@ -1,6 +1,6 @@
 {
   "name": "qjd-ui-hooks",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "UI for Vue 2.x, Hooks for composition-api",
   "author": "xw",
   "main": "lib/qjdui.js",

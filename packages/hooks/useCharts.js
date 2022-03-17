@@ -38,7 +38,7 @@ export default ({
     myChart.value && myChart.value.resize()
   }
   // 设置series-data
-  const setDataSource = (dataSource, index) => {
+  const setDataSource = (dataSource, index = 0) => {
     const { value: { series } } = initOption
     series[index].data = dataSource
   }
