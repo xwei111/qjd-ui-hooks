@@ -5,7 +5,7 @@ import useTimeout from './useTimeout'
 /**
  * 场景：适用于charts(针对项目中的echarts)，若有差异需额外扩展或另外封装
  * @param option charts配置
- * @param id dom-id
+ * @param id dom-id或dom(ref)
  * @param mouseover 鼠标滑过事件
  * @param mouseout 鼠标滑出事件
  * @param isInit 是否初始化调用
@@ -25,7 +25,7 @@ export default ({
   const { perTimeout } = useTimeout()
   // 初始化
   const chartInit = () => {
-    const el = document.getElementById(id)
+    const el = id instanceof HTMLElement ? id : document.getElementById(id)
     if (!myChart.value && el) {
       myChart.value = echarts.init(el)
       setOption()
